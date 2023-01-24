@@ -1,0 +1,5 @@
+# config/routes.yaml
+api_product_index:
+    path:       /api/product
+    controller: App\Controller\ProductController::index
+    methods:    GET
