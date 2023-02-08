@@ -72,7 +72,7 @@ class ParserCommand extends Command
             ];
         }
 
-        $headers = @get_headers($uri);
+        $headers = get_headers($uri);
         if(!$headers || !strpos( $headers[0], '200')) {
             return [
                 'error' => true,

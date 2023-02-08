@@ -16,7 +16,7 @@ class ParserCommandTest extends KernelTestCase
         $command = $application->find('app:parser');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
-            'uri' => 'http://127.0.0.1:8000/products.xml'
+            'uri' => $_ENV['APP_HOST'] . '/products.xml'
         ]);
 
         $commandTester->assertCommandIsSuccessful();
